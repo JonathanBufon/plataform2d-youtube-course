@@ -1,0 +1,88 @@
+[gd_scene format=4 uid="uid://cxnls6vsndisr"]
+
+[ext_resource type="PackedScene" uid="uid://cht4ngxplocrv" path="res://entities/player.tscn" id="1_e2knd"]
+[ext_resource type="TileSet" uid="uid://c2qvmf0uxj6qr" path="res://tiles/terraint.tres" id="2_2xpkg"]
+[ext_resource type="Texture2D" uid="uid://v28k4bev3e0v" path="res://sprites/Seasonal Tilesets/2 - Autumn Forest/Background parts/6 - Distant_trees.png" id="3_gbfvw"]
+[ext_resource type="Texture2D" uid="uid://c3gavnb3d17c0" path="res://sprites/Seasonal Tilesets/2 - Autumn Forest/Background parts/5 - Tree_row_BG_2.png" id="4_wqnte"]
+[ext_resource type="Texture2D" uid="uid://d0weij6co82jj" path="res://sprites/Seasonal Tilesets/2 - Autumn Forest/Background parts/4 - Tree_row_BG_1.png" id="5_qxlj4"]
+[ext_resource type="Texture2D" uid="uid://ce8ily53hhiiv" path="res://sprites/Seasonal Tilesets/2 - Autumn Forest/Background parts/3 - Bottom_leaf_piles.png" id="6_jo4av"]
+[ext_resource type="Texture2D" uid="uid://vwoiy7xyfbpj" path="res://sprites/Seasonal Tilesets/2 - Autumn Forest/Background parts/2 - Trees.png" id="7_jxvlp"]
+[ext_resource type="Texture2D" uid="uid://cha0xwouhcb1r" path="res://sprites/Seasonal Tilesets/2 - Autumn Forest/Background parts/1 - Leaf_top.png" id="8_gwku7"]
+
+[node name="Forest" type="Node2D" unique_id=1513846376]
+
+[node name="player" parent="." unique_id=1986983483 instance=ExtResource("1_e2knd")]
+position = Vector2(32, 124)
+
+[node name="ParallaxBackground" type="Node2D" parent="." unique_id=2130270970]
+
+[node name="6" type="Parallax2D" parent="ParallaxBackground" unique_id=723506468]
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/6" unique_id=1248094604]
+texture_repeat = 2
+texture = ExtResource("3_gbfvw")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 208)
+
+[node name="5" type="Parallax2D" parent="ParallaxBackground" unique_id=838884716]
+scroll_scale = Vector2(0.2, 0.2)
+repeat_size = Vector2(288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/5" unique_id=1367746193]
+texture_repeat = 2
+texture = ExtResource("4_wqnte")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 208)
+
+[node name="4" type="Parallax2D" parent="ParallaxBackground" unique_id=1140398967]
+scroll_scale = Vector2(0.3, 0.3)
+repeat_size = Vector2(288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/4" unique_id=165769425]
+texture_repeat = 2
+texture = ExtResource("5_qxlj4")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 208)
+
+[node name="3" type="Parallax2D" parent="ParallaxBackground" unique_id=1323590463]
+scroll_scale = Vector2(0.4, 0.4)
+repeat_size = Vector2(288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/3" unique_id=1318750296]
+texture_repeat = 2
+texture = ExtResource("6_jo4av")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 208)
+
+[node name="2" type="Parallax2D" parent="ParallaxBackground" unique_id=1955042741]
+scroll_scale = Vector2(0.5, 0.5)
+repeat_size = Vector2(288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/2" unique_id=711848970]
+texture_repeat = 2
+texture = ExtResource("7_jxvlp")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 208)
+
+[node name="1" type="Parallax2D" parent="ParallaxBackground" unique_id=396368961]
+scroll_scale = Vector2(1.2, 1.2)
+repeat_size = Vector2(288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/1" unique_id=2054977199]
+texture_repeat = 2
+position = Vector2(0, -8)
+texture = ExtResource("8_gwku7")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 208)
+
+[node name="Terrain" type="TileMapLayer" parent="." unique_id=835679670]
+tile_map_data = PackedByteArray("AAAAAAwAAQACAAMAAAABAAwAAQACAAMAAAACAAwAAQACAAMAAAADAAwAAQACAAMAAAAEAAwAAQACAAMAAAAFAAwAAQACAAMAAAAGAAwAAQACAAMAAAAHAAwAAQACAAMAAAAIAAwAAQACAAMAAAAJAAwAAQACAAMAAAAKAAwAAQACAAMAAAALAAwAAQACAAMAAAAMAAwAAQACAAMAAAANAAwAAQACAAMAAAAOAAwAAQACAAMAAAAPAAwAAQACAAMAAAAQAAwAAQACAAMAAAARAAwAAQACAAMAAAASAAwAAQACAAMAAAATAAwAAQACAAMAAAAUAAwAAQACAAMAAAAVAAwAAQACAAMAAAAWAAwAAQACAAMAAAAXAAwAAQACAAMAAAAYAAwAAQACAAMAAAAZAAwAAQACAAMAAAAaAAwAAQACAAMAAAAbAAwAAQACAAMAAAAcAAwAAQACAAMAAAAdAAwAAQACAAMAAAAeAAwAAQACAAMAAAAfAAwAAQACAAMAAAAgAAwAAQACAAMAAAAhAAwAAQACAAMAAAAiAAwAAQACAAMAAAAjAAwAAQACAAMAAAAkAAwAAQACAAMAAAAlAAwAAQACAAMAAAAmAAwAAQACAAMAAAAnAAwAAQACAAMAAAAoAAwAAQACAAMAAAApAAwAAQACAAMAAAAqAAwAAQACAAMAAAArAAwAAQACAAMAAAAsAAwAAQACAAMAAAAtAAwAAQACAAMAAAAuAAwAAQACAAMAAAA=")
+tile_set = ExtResource("2_2xpkg")
